@@ -1,2 +1,2 @@
-# Morket
+# Morketie
 Mortie Stock Market Client 
