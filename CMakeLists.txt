@@ -9,10 +9,10 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt5 REQUIRED COMPONENTS Core Widgets Network)
 
 set(SRCS
-        main.cpp morketiewindow.cpp)
+        main.cpp morketiewindow.cpp serverinterface.cpp)
 
 set(HDRS
-        morketiewindow.h)
+        morketiewindow.h serverinterface.h)
 
 set(UIS
         morketiewindow.ui)
@@ -23,4 +23,5 @@ set(RES
 include_directories(${CMAKE_BINARY_DIR})
 
 add_executable(Morketie ${SRCS} ${HDRS} ${UIS} ${RES})
-target_link_libraries(Morketie Qt5::Core Qt5::Widgets)
+target_link_libraries(Morketie Qt5::Core Qt5::Widgets Qt5::Network)
+target_link_libraries(Morketie htmlcxx)

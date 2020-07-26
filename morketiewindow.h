@@ -7,6 +7,8 @@
 
 #include <QMainWindow>
 
+class QNetworkReply;
+
 namespace Ui{
     class MorketieForm;
 }
@@ -18,8 +20,13 @@ public:
     explicit MorketieWindow(QWidget *parent = nullptr);
     ~MorketieWindow() override;
 
+private slots:
+    void analyzeReply();
+
 private:
     Ui::MorketieForm *ui;
+
+    QNetworkReply *reply;
 };
 
 #endif //MORKETIE_MORKETIEWINDOW_H
